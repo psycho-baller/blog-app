@@ -8,19 +8,19 @@ export default class MyDocument extends Document {
         // no js is run here, this is only a renderer for the root page
         // the js is used only in the pages
         
-        return(
-            <Html lang="en">
-                <Head>
-                    {/* <meta charSet="utf-8" />
+        return (
+          <Html lang="en">
+            <Head>
+              {/* <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta name="description" content="A simple blog" />
                     <meta name="author" content="Rami Maalouf" /> */}
-                </Head>
-                <body>
-                    <Main />
-                </body>
-                <NextScript />
-            </Html>
-        )
+            </Head>
+            <body>
+              <Main />
+            </body>
+            <NextScript />
+          </Html>
+        );
     }
 }
