@@ -33,7 +33,10 @@ const Home: NextPage = () => {
           possible fixes:
            https://github.com/vercel/next.js/issues/7915
           then:
-           https://nextjs.org/docs/messages/react-hydration-error */}
+           https://nextjs.org/docs/messages/react-hydration-error
+          ------------------------------------------------------------
+          make it load on the same page:
+           https://flaviocopes.com/react-show-different-component-on-click */}
           <Image
             src="/flashlight.svg"
             alt="flashlight"
