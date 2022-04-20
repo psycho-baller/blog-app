@@ -51,19 +51,19 @@ const Flashlight: NextPage = () => {
         // showCursor={true}
       >
         <div className={flashStyle.animatedGrid}>
-          <div className={flashStyle.card}>
+          <div className={flashStyle.k}>
             <h1 className={flashStyle.center}>knock knock...</h1>
           </div>
-          <div className={flashStyle.card}>
+          <div className={flashStyle.w}>
             <h1 className={flashStyle.center}>who's there...</h1>
           </div>
-          <div className={flashStyle.card}>
+          <div className={flashStyle.req}>
             <h1 className={flashStyle.center}>ligma</h1>
           </div>
-          <div className={flashStyle.card}>
+          <div className={flashStyle.res}>
             <h1 className={flashStyle.center}>ligma who?</h1>
           </div>
-          <div className={flashStyle.card}>
+          <div className={flashStyle.star}>
             <h1 className={flashStyle.center}>ligma balls</h1>
           </div>
         </div>

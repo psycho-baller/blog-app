@@ -25,59 +25,122 @@
   width: 100%;
   height: 100%;
   //   height: 85vh;
-  margin-bottom: 200px;
+  // margin-bottom: 200px;
 
   display: grid;
-  gap: 1rem;
+  column-gap: 6%;
+  row-gap: 8%;
 
   /* Explicit grid */
   grid-template-areas:
-    "k  w"
-    "1  2"
+    "k w"
+    "req res"
     "🌟 🌟";
 
-  grid-template-rows: repeat(3, 33.33%);
-  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, 28%);
+  grid-template-columns: repeat(2, 47%);
 
   --stagger-delay: 100ms;
 }
-.card {
-  //   background-color: rgb(36, 243, 147);
-  //   animation: cardEntrance 700ms ease-out;
-  //   animation-fill-mode: backwards;
-  //   animation-delay: var(--stagger-delay);
+// .card {
+//   background-color: rgb(36, 243, 147);
+//   animation: cardEntrance 700ms ease-out;
+//   animation-fill-mode: backwards;
+//   animation-delay: var(--stagger-delay);
+//   h1 {
+//     visibility: hidden;
+//   }
+// }
+// .card:hover {
+//   animation: cardEntrance 700ms ease-out;
+//   animation-fill-mode: backwards;
+//   h1 {
+//     visibility: visible;
+//   }
+// }
+.k {
+  grid-area: k;
+  animation-delay: calc(1 * var(--stagger-delay));
   h1 {
     visibility: hidden;
   }
 }
-.card:hover {
-  animation: cardEntrance 700ms ease-out;
-  animation-fill-mode: backwards;
-  h1{
-    visibility: visible;
-  }
-//   visibility: visible;
-}
-.card:nth-child(1) {
+.w {
   grid-area: w;
-  animation-delay: calc(1 * var(--stagger-delay));
-}
-.card:nth-child(2) {
-  grid-area: k;
   animation-delay: calc(2 * var(--stagger-delay));
+  h1 {
+    visibility: hidden;
+  }
 }
-.card:nth-child(3) {
-  grid-area: 1;
+.req {
+  grid-area: req;
   animation-delay: calc(3 * var(--stagger-delay));
+  h1 {
+    visibility: hidden;
+  }
 }
-.card:nth-child(4) {
-  grid-area: 2;
+.res {
+  grid-area: res;
   animation-delay: calc(4 * var(--stagger-delay));
+  h1 {
+    visibility: hidden;
+  }
 }
-.card:last-child {
+.star {
   grid-area: 🌟;
   animation-delay: calc(13 * var(--stagger-delay));
+  h1 {
+    visibility: hidden;
+  }
 }
+
+
+.k:hover {
+  h1 {
+    visibility: visible;
+  }
+}
+.k:hover + .w {
+  h1 {
+    visibility: visible;
+  }
+}
+.w:hover {
+  h1 {
+    visibility: visible;
+  }
+}
+.w:hover ~ .req {
+  h1 {
+    visibility: visible;
+  }
+}
+.req:hover {
+  h1 {
+    visibility: visible;
+  }
+}
+.req:hover ~ .res {
+  h1 {
+    visibility: visible;
+  }
+}
+.res:hover {
+  h1 {
+    visibility: visible;
+  }
+}
+.res:hover ~ .star {
+  h1 {
+    visibility: visible;
+  }
+}
+.star:hover {
+  h1 {
+    visibility: visible;
+  }
+}
+
 .knock {
   font-family: "Nova Flat", "Verdana";
   margin: 0;
