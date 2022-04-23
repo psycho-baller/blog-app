@@ -14,6 +14,28 @@
   background-color: #000;
 }
 
+@keyframes identifier {
+  0%{
+    visibility: visible;
+  }
+  1%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .animatedGrid {
   position: fixed;
   padding: 0;
@@ -44,8 +66,14 @@
 .k {
   grid-area: k;
   animation-delay: calc(1 * var(--stagger-delay));
-  h1 {
+  h1{
     visibility: hidden;
+    // animation-timing-function: ; /* how the animation will behave */
+    // animation-delay: 0s; /* how long to delay the animation from starting */
+    // animation-iteration-count: 2; /* how many times the animation will play */
+    animation-name: identifier; /* the name of the animation we defined above */
+    animation-duration: .9s; /* the duration of the animation */
+    // animation: 4s ease-out 0s 1 indentifier;
   }
 }
 .w {
@@ -76,7 +104,6 @@
     visibility: hidden;
   }
 }
-
 
 .k:hover {
   h1 {

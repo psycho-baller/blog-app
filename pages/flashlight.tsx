@@ -1,6 +1,8 @@
+// https://github.com/sickdyd/react-flashlight/blob/master/src/ReactFlashlight.js
+// https://github.com/sickdyd/react-flashlight-demo/blob/master/src/App.js
 import type { NextPage } from "next";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from 'react';
 import { ReactFlashlight } from "react-flashlight";
 import flashStyle from "../styles/index.module.scss";
 
@@ -16,20 +18,6 @@ import flashStyle from "../styles/index.module.scss";
 //   }
 // }
 
-// const [position, setPosition] = React.useState({x: 0, y: 0});
-// const [enabled, setEnabled] = React.useState(true);
-
-// React.useState(()=>{
-//   let id: NodeJS.Timer;
-//   id = setInterval(()=>{
-//     const point = {x: Math.random() * 300, y: Math.random() * 230}
-//     setPosition(point);
-//   }, 2000);
-
-//   return ()=>{
-//     clearInterval(id);
-//   }
-// }, [])
 const isWindowContext = typeof window !== "undefined";
 const Flashlight: NextPage = () => {
   // const { results = [] } = joke
@@ -46,7 +34,7 @@ const Flashlight: NextPage = () => {
       </Head>
       <ReactFlashlight
         initialPosition={React.useState({ x: x, y: y })[0]}
-        size={50}
+        size={150}
         // enableMouse={false}
         // showCursor={true}
       >
