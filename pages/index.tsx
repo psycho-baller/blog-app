@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/flashlight.svg" />
       </Head>
       <div className={styles.main}>
-        <Link href="./flashlight">
+        <Link href="./flashlight" passHref>
           {/* 
           possible fixes:
            https://github.com/vercel/next.js/issues/7915
