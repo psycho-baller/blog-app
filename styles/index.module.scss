@@ -16,10 +16,10 @@
 
 @keyframes identifier {
   0% {
-    visibility: visible;
+    opacity: 0;
   }
   1% {
-    opacity: 0;
+    visibility: visible;
   }
   25% {
     opacity: 1;
