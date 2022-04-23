@@ -81,9 +81,9 @@
   h1 {
     visibility: hidden;
     // animation-timing-function: ; /* how the animation will behave */
-    // animation-delay: 0s; /* how long to delay the animation from starting */
     // animation-iteration-count: 2; /* how many times the animation will play */
     animation-name: identifier; /* the name of the animation we defined above */
+    animation-delay: 0.1s; /* how long to delay the animation from starting */
     animation-duration: 0.9s; /* the duration of the animation */
     // animation: 4s ease-out 0s 1 indentifier;
   }
