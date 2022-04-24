@@ -86,7 +86,6 @@ const Flashlight: NextPage = () => {
           <div className={flashStyle.res}>
             <h1 className={flashStyle.center}>ligma who?</h1>
           </div>
-    gotchaBitch();
           <div className={flashStyle.star} onMouseEnter={horn} onMouseLeave={gotchaBitch}>
             <h1 className={flashStyle.center}>ligma balls</h1>
           </div>
