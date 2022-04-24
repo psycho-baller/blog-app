@@ -45,7 +45,6 @@ const Home: NextPage = () => {
         sound.stop();
       }
     } else {
-
       sound.once("load", function () {
         sound.play();
       });
@@ -56,7 +55,6 @@ const Home: NextPage = () => {
       // works in all browsers except chromium based browsers
       // this line won't run in chromium based browsers
       introSound();
-
     }
   }, []);
   return (
