@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { Howl, Howler } from "howler";
+
 // import index from '../pages/index.module.scss'
 
 // export async function getServerSideProps() {
@@ -20,6 +22,17 @@ const Home: NextPage = () => {
   // const { results = [] } = joke
   // console.log(joke);
   // console.log(results);
+  function introSound() {
+    const sound = new Howl({
+      src: ["intro-sound.mp3"],
+    });
+    sound.once("load", function () {
+      sound.play();
+    });
+  }
+  useEffect(() => {
+    introSound();
+  }, []);
   return (
     <div className={styles.dark}>
       <Head>

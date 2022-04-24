@@ -2,9 +2,10 @@
 // https://github.com/sickdyd/react-flashlight-demo/blob/master/src/App.js
 import type { NextPage } from "next";
 import Head from "next/head";
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { ReactFlashlight } from "react-flashlight";
 import flashStyle from "../styles/index.module.scss";
+import { Howl, Howler } from "howler";
 
 // import index from '../pages/index.module.scss'
 
@@ -25,6 +26,39 @@ const Flashlight: NextPage = () => {
   // console.log(results);
   const x = isWindowContext && window.innerWidth / 2;
   const y = isWindowContext && window.innerHeight / 2;
+  function knockKnock() {
+    const sound = new Howl({
+      src: ["knock-knock.mp3"],
+    });
+    sound.once("load", function () {
+      sound.play();
+    });
+  }
+  function gotchaBitch(){
+    const sound = new Howl({
+      src: ['gotcha-bitch.mp3'],
+    });
+    sound.play()
+  }
+  function horn(){
+    var sound = new Howl({
+      src: ["air-horn.mp3"],
+    });
+
+    // Clear listener after first call.
+    sound.once("load", function () {
+      sound.play();
+    });
+
+    // // Fires when the sound finishes playing.
+    // sound.on("end", function () {
+    //   console.log("Finished!");
+    // });
+  }
+  useEffect(() => {
+    knockKnock();
+  }, []);
+    
   return (
     <div className={flashStyle.fullScreen}>
       <Head>
@@ -51,7 +85,8 @@ const Flashlight: NextPage = () => {
           <div className={flashStyle.res}>
             <h1 className={flashStyle.center}>ligma who?</h1>
           </div>
-          <div className={flashStyle.star}>
+    gotchaBitch();
+          <div className={flashStyle.star} onMouseEnter={horn} onMouseLeave={gotchaBitch}>
             <h1 className={flashStyle.center}>ligma balls</h1>
           </div>
         </div>
