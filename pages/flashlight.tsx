@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import { ReactFlashlight } from "react-flashlight";
 import flashStyle from "../styles/index.module.scss";
 import { Howl, Howler } from "howler";
+// https://github.com/goldfire/howler.js#quick-start
 
 // import index from '../pages/index.module.scss'
 
