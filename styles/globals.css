@@ -1,8 +1,8 @@
 html,
 body {
-  background-color: rgba(0, 0, 0, .750);
+  background-color: rgb(255, 255, 255);
   /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg'); */
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

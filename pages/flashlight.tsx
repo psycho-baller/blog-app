@@ -19,7 +19,9 @@ import { Howl, Howler } from "howler";
 //     }
 //   }
 // }
-
+const isWindowContext = typeof window !== "undefined";
+const x: number = (isWindowContext && window.innerWidth / 2) as number;
+const y: number = (isWindowContext && window.innerHeight / 2) as number;
 const Flashlight: NextPage = () => {
   // const { results = [] } = joke
   // console.log(joke);
@@ -55,15 +57,12 @@ const Flashlight: NextPage = () => {
     // });
   }
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isOn, setIsOn] = useState(true);
+  const [position, setPosition] = useState({ x: x, y: y });
+  const [enabled, setEnabled] = useState(true);
 
   useEffect(() => {
-    const isWindowContext = typeof window !== "undefined";
-    const x: number = (isWindowContext && window.innerWidth / 2) as number;
-    const y: number = (isWindowContext && window.innerHeight / 2) as number;
-    // const point: number = { x: x, y: y };
-    setPosition({ x: x, y: y });
+    // runs when the page runs
+    // setPosition({ x: x, y: y });
     knockKnock();
   }, []);
 
@@ -75,12 +74,17 @@ const Flashlight: NextPage = () => {
         <link rel="icon" href="/torch.svg" />
       </Head>
       <ReactFlashlight
+        enabled={enabled}
         initialPosition={position}
         size={150}
+        // darkness={.85}
         // enableMouse={false}
         // showCursor={true}
       >
-        <div className={flashStyle.animatedGrid}>
+        <div
+          className={flashStyle.animatedGrid}
+          onClick={() => setEnabled(!enabled)}
+        >
           <div className={flashStyle.k}>
             <h1 className={flashStyle.center}>knock knock...</h1>
           </div>

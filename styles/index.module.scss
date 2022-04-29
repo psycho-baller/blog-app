@@ -14,40 +14,50 @@
   background-color: #000;
   width: 100%;
   height: 100%;
-    top: 0;
+  top: 0;
   left: 0;
 }
 
 @keyframes identifier {
   0% {
-    opacity: 0;
+    color: rgb(255, 255, 255);
+    opacity: 1;
   }
   1% {
     visibility: visible;
+    color: rgb(255, 255, 255);
   }
   25% {
+    color: rgb(255, 255, 255);
     opacity: 1;
   }
   50% {
+    color: rgb(255, 255, 255);
+
     opacity: 0;
   }
   75% {
+    color: rgb(255, 255, 255);
     opacity: 1;
   }
   100% {
+    color: rgb(255, 255, 255);
     opacity: 0;
     visibility: hidden;
   }
 }
 @keyframes flash {
   0% {
+    color: rgb(255, 255, 255);
     visibility: visible;
     opacity: 0;
   }
   50% {
+    color: rgb(255, 255, 255);
     opacity: 1;
   }
   100% {
+    color: rgb(255, 255, 255);
     opacity: 0;
     visibility: hidden;
   }
